@@ -1,0 +1,23 @@
+.about {
+    flex: auto;
+    flex-direction: row;
+    white-space: pre-wrap;
+}
+
+.aboutpage {
+    flex: auto;
+    flex-direction: row;
+    white-space: pre-wrap;
+}
+
+.aboutpage-characters {
+    flex: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    white-space: pre-wrap;
+}
+
+img {
+    display: block;
+    align-items: center;
+}
