@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import Trivia from './Trivia';
@@ -19,7 +19,7 @@ class App extends Component {
           </ul>
         </div>
         <Switch>
-          <div className="app-navbar-content">
+          <div>
             <Route exact path='/' component={HomePage} />
             <Route path='/about' component={AboutPage} />
             <Route path='/trivia' component={Trivia} />
