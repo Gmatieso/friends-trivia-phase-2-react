@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class LogInForm extends Component {
+class HomePage extends Component {
     handleSubmit(e) {
         e.preventDefault();
     }
@@ -11,7 +11,7 @@ class LogInForm extends Component {
 
     render() {
         return (
-            <div className='LogInForm'>
+            <div className='homepage'>
                 <form onSubmit={this.handleSubmit}>
                     <label>Username:</label>
                     <input type='text' value={this.state.username} onChange={this.handleUsernameChange} />
@@ -22,4 +22,4 @@ class LogInForm extends Component {
     }
 }
 
-export default LogInForm;
+export default HomePage;
