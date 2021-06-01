@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import LogInForm from './LogInForm';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
+import AboutPage from './AboutPage';
 import Trivia from './Trivia';
+import Comments from './Comments';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Route path='/' component={LogInForm} />
-        <Trivia />
-      </div>
+      <Switch>
+        <div className="App">
+          <Route path='/' component={LogInForm} />
+          <Route path='/about' component={AboutPage} />
+          <Route path='/trivia' component={Trivia} />
+          <Route path='/comments' component={Comments} />
+        </div>
+      </Switch>
     );
   }
 }
