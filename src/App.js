@@ -17,15 +17,13 @@ class App extends Component {
             <li><Link to='/trivia'>Trivia</Link></li>
             <li><Link to='/comments'>Comments</Link></li>
           </ul>
-        </div>
-        <Switch>
-          <div>
+          <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/about' component={AboutPage} />
             <Route path='/trivia' component={Trivia} />
             <Route path='/comments' component={Comments} />
-          </div>
-        </Switch>
+          </Switch>
+        </div>
       </Router>
     );
   }
