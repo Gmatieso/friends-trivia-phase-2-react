@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Trivia.css';
 
-const api_url = 'https://friends-quotes-api.herokuapp.com/quotes';
+// const api_url = 'https://friends-quotes-api.herokuapp.com/quotes';
+const api_url = 'https://csjeon28.github.io/Data/db.json';
 
 class Trivia extends Component {
     constructor(props) {
@@ -21,34 +22,52 @@ class Trivia extends Component {
             answer3: '',
             answer4: '',
         };
+        // this.startGame = this.startGame.bind(this);
+        // this.loadNewQuestion = this.loadNewQuestion.bind(this);
+        this.fetchQuestions = this.fetchQuestions.bind(this);
     }
 
-    async componentDidMount() {
-        let allQuotes = await axios.get(api_url);
-        this.setState({ quotes: allQuotes.data })
-        // let quote1 = this.state.quotes[0].quote
-        // let quote2 = this.state.quotes[1].quote
-        // let quote3 = this.state.quotes[2].quote
-        // let quote4 = this.state.quotes[3].quote
-        // let quote5 = this.state.quotes[4].quote
-        // let quote6 = this.state.quotes[5].quote
-        // let quote7 = this.state.quotes[6].quote
-        // let quote8 = this.state.quotes[7].quote
-        // let quote9 = this.state.quotes[8].quote
-        // let quote10 = this.state.quotes[9].quote
-        // let quote11 = this.state.quotes[10].quote
-        // let quote12 = this.state.quotes[11].quote
-        // let quote13 = this.state.quotes[12].quote
-        // let quote14 = this.state.quotes[13].quote
-        // let quote15 = this.state.quotes[14].quote
-        // let quote16 = this.state.quotes[15].quote
-        // let quote17 = this.state.quotes[16].quote
-        // let quote18 = this.state.quotes[17].quote
+    // async componentDidMount() {
+    //     const triviaQuestions = await axios.get(api_url);
+    //     this.setState({ 
+    //         allQuestions: triviaQuestions.data 
+    //     });
+    // }
+
+    fetchQuestions() {
+        axios.get(api_url)
+            .then(response => {
+                this.setState({
+                    question: response.data.question,
+                })
+                console.log(response.data[0].question)
+            })
     }
 
-    getQuestions() {
-
+    componentDidMount() {
+        this.fetchQuestions();
     }
+
+
+    // startGame = () => {
+    //     this.setState({
+    //         gameStart: true,
+    //         questionNumber: this.state.questionNumber + 1
+    //     });
+    //     this.loadNewQuestion();
+    // }
+
+    // loadNewQuestion = () => {
+    //     this.setState({
+    //         question: triviaQuestions[this.state.questionNumber].question,
+    //         answer1: triviaQuestions[this.state.questionNumber].answer1,
+    //         answer2: triviaQuestions[this.state.questionNumber].answer2,
+    //         answer3: triviaQuestions[this.state.questionNumber].answer3,
+    //         answer4: triviaQuestions[this.state.questionNumber].answer4,
+    //         correct: triviaQuestions[this.state.questionNumber].correct,
+    //         totalQuestions: triviaQuestions.length
+    //     })
+    // }
 
     render() {
         return (
