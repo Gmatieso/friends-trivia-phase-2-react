@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './Trivia.css';
+import axios from 'axios';
 
-// const api_url = 'https://friends-quotes-api.herokuapp.com/quotes';
 const api_url = 'https://csjeon28.github.io/Data/db.json';
 
 class Trivia extends Component {
@@ -10,7 +9,7 @@ class Trivia extends Component {
         super(props);
         this.state = {
             gameStart: false,
-            initialGameState: true,
+            userAnswer: null,
             score: 0,
             gameReset: false,
             questionNumber: 0,
@@ -22,9 +21,9 @@ class Trivia extends Component {
             answer3: '',
             answer4: '',
         };
-        // this.startGame = this.startGame.bind(this);
-        // this.loadNewQuestion = this.loadNewQuestion.bind(this);
-        this.fetchQuestions = this.fetchQuestions.bind(this);
+        this.startGame = this.startGame.bind(this);
+        this.loadNewQuestion = this.loadNewQuestion.bind(this);
+        // this.fetchQuestions = this.fetchQuestions.bind(this);
     }
 
     // async componentDidMount() {
@@ -33,43 +32,67 @@ class Trivia extends Component {
     //         allQuestions: triviaQuestions.data 
     //     });
     // }
+    componentDidMount() {
+        this.fetchQuestions();
+    }
 
     fetchQuestions() {
         axios.get(api_url)
             .then(response => {
                 this.setState({
-                    question: response.data.question,
+                    question: response.data
                 })
-                console.log(response.data[0].question)
             })
     }
 
-    componentDidMount() {
-        this.fetchQuestions();
+    startGame = () => {
+        this.setState({
+            gameStart: true,
+            questionNumber: this.state.questionNumber + 1
+        });
+        this.loadNewQuestion();
     }
 
+    loadNewQuestion = () => {
+        const { questionNumber } = this.state
+        this.setState({
+            question: [questionNumber].question,
+            answer1: [questionNumber].answer1,
+            answer2: [questionNumber].answer2,
+            answer3: [questionNumber].answer3,
+            answer4: [questionNumber].answer4,
+            correct: [questionNumber].correct,
+            totalQuestions: [questionNumber].length
+        })
+        this.nextQuestion();
+    }
 
-    // startGame = () => {
-    //     this.setState({
-    //         gameStart: true,
-    //         questionNumber: this.state.questionNumber + 1
-    //     });
-    //     this.loadNewQuestion();
-    // }
+    nextQuestion = () => {
+        if (this.state.userAnswer === this.state.correct) {
+            this.setState({ score: this.state.score + 1 })
+        }
+    }
 
-    // loadNewQuestion = () => {
-    //     this.setState({
-    //         question: triviaQuestions[this.state.questionNumber].question,
-    //         answer1: triviaQuestions[this.state.questionNumber].answer1,
-    //         answer2: triviaQuestions[this.state.questionNumber].answer2,
-    //         answer3: triviaQuestions[this.state.questionNumber].answer3,
-    //         answer4: triviaQuestions[this.state.questionNumber].answer4,
-    //         correct: triviaQuestions[this.state.questionNumber].correct,
-    //         totalQuestions: triviaQuestions.length
-    //     })
-    // }
+    checkAnswer = (correct) => {
+        this.setState({
+            userAnswer: correct,
+        })
+    }
+
+    finishGame = () => {
+        if (this.state.questionNumber === [this.state.questionNumber].length - 1) {
+            this.setState({
+                gameReset: true
+            })
+        }
+    }
+
+    handleClick = () => {
+        this.loadNewQuestion();
+    }
 
     render() {
+
         return (
             <div className='trivia'>
                 <div className='trivia-start-button'>
@@ -86,7 +109,7 @@ class Trivia extends Component {
                     </div>
                     <div className='trivia-buttons'>
                         <button className='trivia-quit'>Quit Game</button>
-                        <button className='trivia-continue'>Continue</button>
+                        <button className='trivia-continue' onClick={this.handleClick}>Continue</button>
                     </div>
                 </div>
             </div>
@@ -94,5 +117,5 @@ class Trivia extends Component {
     }
 }
 
-export default Trivia;
 
+export default Trivia;
