@@ -1,0 +1,93 @@
+body {
+    background-color: rgba(255, 250, 207, 0.897);
+}
+
+.trivia-start-button, .trivia-info-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.trivia-start-button button {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(255, 250, 207, 0.897);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: rgb(123, 70, 153);
+    cursor: pointer;
+}
+
+.trivia-info-box {
+    width: 500px;
+    background: white;
+    border-radius: 4px;
+}
+
+.trivia-info-box .trivia-info-title {
+    height: 80px;
+    width: 84%;
+    border-bottom: 3px dotted rgb(61, 181, 185);
+    display: flex;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.trivia-info-box .trivia-info-list {
+    padding: 15px 35px;
+}
+
+.trivia-info-box .trivia-info-list .trivia-info{
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.trivia-info-box .trivia-info-list .trivia-info span{
+    font-weight: 800;
+    color:rgb(123, 70, 153);
+}
+
+.trivia-buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 3px dotted rgb(61, 181, 185);
+}
+
+.trivia-buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid rgb(123, 70, 153);
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.trivia-buttons button.trivia-continue{
+    color: rgba(255, 250, 207, 0.897);
+    background: rgb(123, 70, 153);
+}
+
+.trivia-buttons button.trivia-continue:hover{
+    background: rgba(56, 21, 77, 0.932);
+}
+
+.trivia-buttons button.trivia-quit{
+    color: rgb(123, 70, 153);
+}
+
+.trivia-buttons button.trivia-quit:hover{
+    color: rgba(255, 250, 207, 0.897);
+    background: rgb(123, 70, 153);
+}
