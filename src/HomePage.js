@@ -18,6 +18,8 @@ class HomePage extends Component {
         })
     }
 
+    //figure out handleSubmit
+
     startTrivia() {
         if (this.state.username !== '') {
             this.setState({
