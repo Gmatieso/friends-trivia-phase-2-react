@@ -9,7 +9,7 @@ class HomePage extends Component {
             username: '',
             gameStart: false
         }
-        this.startQuiz = this.startQuiz.bind(this)
+        this.startTrivia = this.startTrivia.bind(this)
     }
 
     handleUsername = (e) => {
@@ -18,7 +18,7 @@ class HomePage extends Component {
         })
     }
 
-    startQuiz() {
+    startTrivia() {
         if (this.state.username !== '') {
             this.setState({
                 gameStart: true
@@ -54,7 +54,7 @@ class HomePage extends Component {
                         value='Log In'
                         className='homepage-username-button'
                         disabled={this.state.username.length < 1}
-                        onClick={this.startQuiz}
+                        onClick={this.startTrivia}
                     />
                 </form>
             </div>
