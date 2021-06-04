@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './AboutPage.css';
 
 class AboutPage extends Component {
     render() {
@@ -21,12 +22,12 @@ class AboutPage extends Component {
                 </div>
                 <h2>About Me</h2>
                 <div>
-                    Hello~ My name is Christine Jeon. I absolutely love Friends and could
+                    Hello~ My name is Christine Jeon. I absolutely love Friends and can
                     probably recite every single line from every episode of every season
                     of this series. I was very excited about the Friends Reunion on HBO Max
-                    and thought I could create an app for fellow Friends lovers. I used just
-                    a few quotes from the show to create a trivia game. See if you're also a
-                    Friends fanatic and can get all of the questions correct!
+                    and thought I'd create a trivia game for my fellow Friends lovers. See if
+                    you're also a Friends fanatic and can answer all of the trivia questions!
+                    Good luck!
                 </div>
             </div>
         )
