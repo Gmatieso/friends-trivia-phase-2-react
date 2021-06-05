@@ -6,10 +6,10 @@
 * Apply knowledge of components, props, and state.
 
 ### API Documentation: 
-https://friends-quotes-api.herokuapp.com/quotes
+https://csjeon28.github.io/Data/db.json
 
 ## My Application: 
-My React Single Page Application is a trivia game based on the Friends Television Series. Utilizing the quotes given in the API mentioned above, my application allows you to create a username, answer trivia questions, and keep track of your score. 
+My React Single Page Application is a trivia game based on the Friends Television Series. I created my own API JSON GitHub File to extract my data from. My application allows you to create a username, answer trivia questions, and keep track of your score. 
 
 Through routing, you can click on `Home`, `About`, and `Trivia` 
 * When clicking on `Home`, you can create your username and start the trivia.    
