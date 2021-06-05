@@ -12,7 +12,7 @@ class AboutPage extends Component {
                 </div>
                 <img src='./images/Friends cast.jpeg' alt='friends-cast'></img>
                 <div className='aboutpage-characters'>
-                    The main characters are (from left to right):
+                    The main characters (from left to right):
                     Ross Geller, played by David Schwimmer,
                     Rachel Green, played by Jennifer Aniston,
                     Monica Geller, played by Courteney Cox,
@@ -27,6 +27,7 @@ class AboutPage extends Component {
                     of this series. I was very excited about the Friends Reunion on HBO Max
                     and thought I'd create a trivia game for my fellow Friends lovers. See if
                     you're also a Friends fanatic and can answer all of the trivia questions!
+                    You'll be able to see your score at the end!
                     Good luck!
                 </div>
             </div>
