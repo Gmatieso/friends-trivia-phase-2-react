@@ -12,19 +12,21 @@ class QuizQuestions extends Component {
             currentQuestionIndex: 0,
             userAnswer: '',
             score: 0,
-            gameReset: false,
             allQuestions: [],
             disabledAnswerChoices: false,
             answer1: false,
             answer2: false,
             answer3: false,
             answer4: false,
-            endQuiz: false,
+            endTrivia: false,
             disabledAnswerCheck: true,
             selectedOption: ''
         }
-        this.checkCorrectAnswer = this.checkCorrectAnswer.bind(this)
         this.incrementQuestionCount = this.incrementQuestionCount.bind(this)
+        this.checkUserAnswer = this.checkUserAnswer.bind(this)
+        this.checkCorrectAnswer = this.checkCorrectAnswer.bind(this)
+        this.logUserAnswer = this.logUserAnswer.bind(this)
+        this.handleOptionChange = this.handleOptionChange.bind(this)
     }
 
     async componentDidMount() {
@@ -58,6 +60,12 @@ class QuizQuestions extends Component {
     }
 
     incrementQuestionCount = () => {
+        const { userAnswer, score } = this.state;
+        if (this.checkUserAnswer(userAnswer)) {
+            this.setState({
+                score: score + 1
+            })
+        }
         this.setState({
             currentQuestionIndex: this.state.currentQuestionIndex + 1,
             disabledAnswerChoices: false,
@@ -75,12 +83,8 @@ class QuizQuestions extends Component {
     }
 
     checkCorrectAnswer = () => {
-        const { userAnswer, score, correct, currentQuestionIndex } = this.state
-        if (this.checkUserAnswer(userAnswer)) {
-            this.setState({
-                score: score + 1
-            })
-        }
+        const { correct, currentQuestionIndex } = this.state
+
         this.setState({
             disabledAnswerChoices: true,
             correctAnswer: correct[currentQuestionIndex]
@@ -88,17 +92,18 @@ class QuizQuestions extends Component {
     }
 
     logUserAnswer = (e) => {
+        const { answer1, answer2, answer3, answer4 } = this.state;
         if (e.target.id === 'choice1') {
-            this.setState({ answer1: this.state.answer1, userAnswer: e.target.value })
+            this.setState({ answer1: answer1, userAnswer: e.target.value })
         }
         else if (e.target.id === 'choice2') {
-            this.setState({ answer2: this.state.answer2, userAnswer: e.target.value })
+            this.setState({ answer2: answer2, userAnswer: e.target.value })
         }
         else if (e.target.id === 'choice3') {
-            this.setState({ answer3: this.state.answer3, userAnswer: e.target.value })
+            this.setState({ answer3: answer3, userAnswer: e.target.value })
         }
         else if (e.target.id === 'choice4') {
-            this.setState({ answer4: this.state.answer4, userAnswer: e.target.value })
+            this.setState({ answer4: answer4, userAnswer: e.target.value })
         }
         this.setState({ disabledAnswerCheck: false })
     }
@@ -110,20 +115,20 @@ class QuizQuestions extends Component {
     }
 
     render() {
-        const { currentQuestionIndex, allQuestions, answer1, answer2, answer3, answer4, endQuiz, score } = this.state;
+        const { currentQuestionIndex, allQuestions, answer1, answer2, answer3, answer4, endTrivia } = this.state;
         let currentQuestion = allQuestions[currentQuestionIndex]
         let answer1Option = answer1[currentQuestionIndex]
         let answer2Option = answer2[currentQuestionIndex]
         let answer3Option = answer3[currentQuestionIndex]
         let answer4Option = answer4[currentQuestionIndex]
 
-        if ((currentQuestionIndex <= allQuestions.length - 1) && (endQuiz === false)) {
+        if ((currentQuestionIndex <= allQuestions.length - 1) && (endTrivia === false)) {
             return (
                 <div>
                     <header>{this.props.username}</header>
                     <div className='quizquestions'>
                         <h1>{currentQuestion}</h1>
-                        <h3>{currentQuestionIndex + 1} of {allQuestions.length} Questions </h3>
+                        <h3>Question {currentQuestionIndex + 1} of {allQuestions.length} </h3>
                         <GameTimer />
                         <fieldset disabled={this.state.disabledAnswerChoices}>
                             <div className='options'>
@@ -171,7 +176,7 @@ class QuizQuestions extends Component {
                         <button className='button' onClick={this.incrementQuestionCount} >Continue</button>
                     </div >
                     <div>
-                        <center><button onClick={() => { this.setState({ endQuiz: true }) }} >End Quiz</button></center>
+                        <center><button onClick={() => { this.setState({ endTrivia: true }) }} >End Quiz</button></center>
                         <br></br>
                     </div>
                 </div>
@@ -180,7 +185,7 @@ class QuizQuestions extends Component {
         else {
             return (
                 <div >
-                    <Score username={this.props.username} score={score} />
+                    <Score username={this.props.username} score={this.state.score} allQuestionCount={allQuestions.length} />
                     <br />
                 </div>
             )
