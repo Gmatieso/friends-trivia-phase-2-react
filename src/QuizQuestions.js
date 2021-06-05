@@ -129,7 +129,6 @@ class QuizQuestions extends Component {
                     <div className='quizquestions'>
                         <h1>{currentQuestion}</h1>
                         <h3>Question {currentQuestionIndex + 1} of {allQuestions.length} </h3>
-                        <GameTimer />
                         <fieldset disabled={this.state.disabledAnswerChoices}>
                             <div className='options'>
                                 <input
