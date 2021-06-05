@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import Trivia from './Trivia';
-import Comments from './Comments';
 import './App.css';
 
 class App extends Component {
@@ -15,13 +14,11 @@ class App extends Component {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/trivia'>Trivia</Link></li>
-            <li><Link to='/comments'>Comments</Link></li>
           </ul>
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/about' component={AboutPage} />
             <Route path='/trivia' component={Trivia} />
-            <Route path='/comments' component={Comments} />
           </Switch>
         </div>
       </Router>
