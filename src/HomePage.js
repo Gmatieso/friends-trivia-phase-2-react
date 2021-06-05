@@ -62,7 +62,7 @@ class HomePage extends Component {
                         onClick={this.startTrivia}
                     />
                     <h5>Your username must be at least 4 characters.</h5>
-                    <img src='/images/Friends door.jpeg' alt='Friends door'></img>
+                    <img src='/images/Friendsdoor.jpeg' alt='Friends door'></img>
                 </form>
             </div>
         )
