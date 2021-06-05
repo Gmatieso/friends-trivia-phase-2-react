@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Score from './Score';
-import GameTimer from './GameTimer';
 
 const api_url = 'https://csjeon28.github.io/Data/db.json';
 
