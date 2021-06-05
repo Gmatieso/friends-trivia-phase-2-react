@@ -20,14 +20,14 @@ function Score(props) {
         )
     }
 
-
     return (
         <div>
             <header>username={props.username}</header>
             <div className='score-container'>
                 <div className='score-card'>
-                    <h1>You've reached the end of the quiz!</h1>
-                    <h2>Your score is: {props.score}</h2>
+                    <h1>You've reached the end of the game!</h1>
+                    <h2>Your score: {props.score}.</h2>
+                    <h3>{(props.score / props.allQuestionCount * 100).toFixed(2)}%</h3>
                 </div>
                 <button
                     className='score-restart-button'
@@ -44,7 +44,5 @@ function Score(props) {
     )
 
 }
-
-
 
 export default Score;
