@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Trivia.css';
+import './Trivia.css';
 import axios from 'axios';
 import HomePage from './HomePage';
 import QuizQuestions from './QuizQuestions';
@@ -17,7 +17,7 @@ class Trivia extends Component {
         this.startGame = this.startGame.bind(this);
     }
 
-    async componentDidMount() {
+    async fetchQuestions() {
         let allData = await axios.get(api_url);
         const questions = allData.data.quizData.map(q => {
             return q.question
@@ -28,9 +28,13 @@ class Trivia extends Component {
         })
     };
 
+    componentDidMount() {
+        this.fetchQuestions();
+    }
+
     startGame() {
         this.setState({
-            startQuiz: true
+            startQuiz: true,
         })
     }
 
