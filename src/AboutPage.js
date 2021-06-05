@@ -10,7 +10,7 @@ class AboutPage extends Component {
                     Friends is one of the most popular TV shows that aired from 1994-2004.
                     It's about 6 friends, living in Manhattan, going through life together.
                 </div>
-                <img src='./images/Friends cast.jpeg' alt='friends-cast'></img>
+                <img src='./images/FriendsCastPic.jpeg' alt='friends-cast'></img>
                 <div className='aboutpage-characters'>
                     The main characters (from left to right):
                     Ross Geller, played by David Schwimmer,
