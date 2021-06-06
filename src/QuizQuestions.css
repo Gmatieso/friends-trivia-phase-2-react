@@ -1,0 +1,122 @@
+body {
+    background-color: rgba(255, 250, 207, 0.897);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(123, 70, 153);
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:rgba(255, 250, 207, 0.897);
+}
+
+.quizquestions {
+    position: relative;
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    bottom: 180px;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border-radius: 40px;
+    padding-bottom: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+h1 {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px 2px;
+    font-size: 17px;
+    font-weight: 640;
+}
+
+.options {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 22px;
+}
+
+input[type='radio']:before {
+    content: ' ';
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    right: 2px;
+    left: -1px;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    border: 2px solid rgb(123, 70, 153);
+    background-color: transparent;
+}
+
+.quizquestions-check button, .quizquestions-continue-end button {
+    margin: 2px 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid rgb(123, 70, 153);
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.quizquestions-check button {
+    background: rgba(255, 250, 207, 0.897);
+    color: rgb(123, 70, 153);
+}
+
+.quizquestions-check button:hover{
+    background: rgb(123, 70, 153);
+    color: rgba(255, 250, 207, 0.897);
+}
+
+.quizquestions-check span {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 2%;
+    color: rgba(123, 70, 153, 0.61);
+}
+
+.quizquestions-continue-end button {
+    color: rgba(255, 250, 207, 0.897);
+    background: rgba(123, 70, 153, 0.89);
+    font-weight: 900;
+}
+
+.quizquestions-continue-end button.continue:hover {
+    background: rgb(123, 70, 153);
+    color: rgba(255, 250, 207, 0.897);
+}
+
+.quizquestions-continue-end button.end {
+    position: relative;
+    left: 280px;
+    background: rgba(255, 250, 207, 0.897);
+    color: rgb(123, 70, 153);
+}
+
+.quizquestions-continue-end button.end:hover {
+    background: rgb(123, 70, 153);
+    color: rgba(255, 250, 207, 0.897);
+}
