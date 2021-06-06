@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Score from './Score';
+import './QuizQuestions.css'
 
 const api_url = 'https://csjeon28.github.io/Data/db.json';
 
@@ -166,17 +167,26 @@ class QuizQuestions extends Component {
                                     value={answer4Option} />
                                 {answer4Option}</div>
                         </fieldset>
-
-                        <div>
-                            <button onClick={this.checkCorrectAnswer} disabled={this.state.disabledAnswerCheck}>Check Answer</button>
+                        <div className='quizquestions-check'>
+                            <button
+                                onClick={this.checkCorrectAnswer}
+                                disabled={this.state.disabledAnswerCheck}
+                            >Check Answer</button>
                             <span>Correct Answer: {this.state.correctAnswer}</span>
                         </div>
-                        <button className='button' onClick={this.incrementQuestionCount} >Continue</button>
+                        <div className='quizquestions-continue-end'>
+                            <button
+                                className='continue'
+                                onClick={this.incrementQuestionCount}
+                            >Continue</button>
+
+                            <button
+                                className='end'
+                                onClick={() => { this.setState({ endTrivia: true }) }}
+                            >End Quiz</button>
+
+                        </div>
                     </div >
-                    <div>
-                        <center><button onClick={() => { this.setState({ endTrivia: true }) }} >End Quiz</button></center>
-                        <br></br>
-                    </div>
                 </div>
             )
         }
@@ -189,7 +199,6 @@ class QuizQuestions extends Component {
             )
         }
     }
-
 }
 export default QuizQuestions;
 
