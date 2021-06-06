@@ -11,14 +11,15 @@ class App extends Component {
       <Router>
         <div>
           <ul className='app-navbar'>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/about'>About</Link></li>
-            <li><Link to='/trivia'>Trivia</Link></li>
+            <li><Link to='/home' className='app-navbar-link'>Home</Link></li>
+            <li><Link to='/about' className='app-navbar-link'>About</Link></li>
+            <li><Link to='/trivia' className='app-navbar-link'>Trivia</Link></li>
           </ul>
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route path='/about' component={AboutPage} />
-            <Route path='/trivia' component={Trivia} />
+            <Route exact path='/home' component={HomePage} />
+            <Route exact path='/about' component={AboutPage} />
+            <Route exact path='/trivia' component={Trivia} />
           </Switch>
         </div>
       </Router>
