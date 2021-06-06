@@ -1,16 +1,20 @@
 .app-navbar {
-  background-color: rgb(255, 255, 208);
-  padding: 20px;
+  background-color: rgba(255, 250, 207, 0.897);
+  padding: 10px;
+  padding-left: 10px;
+  border-bottom: 1px dotted rgba(108, 65, 156, 0.664);
 }
 
 li {
-  color: rgb(107, 65, 156);
+  color: rgb(108, 65, 156);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 28px;
+  letter-spacing: 4px;
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
+  padding-right: 40px;
 }
 
-/* .active {
-  background-color: rgb(140, 98, 180);
-} */
+.app-navbar-link:hover {
+  color:rgb(164, 134, 192);
+}
