@@ -22,7 +22,7 @@ function Score(props) {
     }
 
     return (
-        <div>
+        <div className='score'>
             <header>Current User: {props.username}</header>
             <div className='score-container'>
                 <div className='score-card'>
@@ -43,6 +43,7 @@ function Score(props) {
 
                 </div>
             </div>
+            <img src='/images/RachelPhoebe.gif' alt='Rachel and Phoebe excited'></img>
         </div>
     )
 
