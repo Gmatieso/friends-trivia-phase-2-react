@@ -83,3 +83,7 @@ header {
     color: rgba(255, 250, 207, 0.897);
     background: rgb(123, 70, 153);
 }
+
+img {
+    border-radius: 20px;
+}
