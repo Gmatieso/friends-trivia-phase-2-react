@@ -55,16 +55,13 @@ class Trivia extends Component {
         return (
             <div className='trivia'>
                 <header>Current User: {this.props.username}</header>
-                <div className='trivia-start-button'>
-                    <button>Start Quiz</button>
-                </div>
                 <div className='trivia-info-box'>
                     <div className='trivia-info-title'>
-                        <span>Test Your Friends Knowledge! But first, here are the rules:</span>
+                        <span>Test Your Friends Knowledge! But first, a <span className='innerspan'>friendly</span> reminder:</span>
                     </div>
                     <div className='trivia-info-list'>
-                        <div className='trivia-info'>1. You will have <span>10 seconds</span> to answer each question.</div>
-                        <div className='trivia-info'>2. Don't exit from the Trivia Game while you're playing. You'll have to start over.</div>
+                        <div className='trivia-info'>1. Don't exit from the Trivia Game while you're playing. You'll have to start over.</div>
+                        <div className='trivia-info'>2. You can check your answer to see if you got it right!</div>
                         <div className='trivia-info'>3. Last but not least, don't cheat!</div>
                     </div>
                     <div className='trivia-buttons'>
