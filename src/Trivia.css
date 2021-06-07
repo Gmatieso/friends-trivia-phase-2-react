@@ -2,6 +2,10 @@ body {
     background-color: rgba(255, 250, 207, 0.897);
 }
 
+header {
+    text-align: left;
+}
+
 .trivia-info-box {
     position: relative;
     top: 140px;
@@ -10,14 +14,12 @@ body {
     bottom: 140px;
     transform: translate(-50%, -50%);
     width: 500px;
-    background: rgba(142, 241, 247, 0.151);
     border-radius: 40px;
 }
 
 .trivia-info-box .trivia-info-title {
     height: 80px;
     width: 84%;
-    border-bottom: 3px dotted rgb(61, 181, 185);
     display: flex;
     font-size: 26px;
     font-weight: 700;
@@ -49,7 +51,6 @@ body {
     align-items: center;
     justify-content: flex-end;
     padding: 0 35px;
-    border-top: 3px dotted rgb(61, 181, 185);
 }
 
 .trivia-buttons button{
