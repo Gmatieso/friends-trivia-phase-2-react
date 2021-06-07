@@ -75,6 +75,7 @@ class Trivia extends Component {
                             Continue</button>
                     </div>
                 </div>
+                <img src='/images/Rossquiz.jpeg' alt='Friends Ross trivia episode'></img>
             </div>
         )
     }
