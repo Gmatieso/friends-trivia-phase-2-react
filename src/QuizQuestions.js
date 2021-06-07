@@ -125,7 +125,7 @@ class QuizQuestions extends Component {
         if ((currentQuestionIndex <= allQuestions.length - 1) && (endTrivia === false)) {
             return (
                 <div>
-                    <header>{this.props.username}</header>
+                    <header>Current User: {this.props.username}</header>
                     <div className='quizquestions'>
                         <h1>{currentQuestion}</h1>
                         <h3>Question {currentQuestionIndex + 1} of {allQuestions.length} </h3>
