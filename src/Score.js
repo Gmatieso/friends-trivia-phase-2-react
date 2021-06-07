@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Trivia from './Trivia';
 import QuizQuestions from './QuizQuestions';
+import './Score.css';
 
 function Score(props) {
     const [homePage, setHomePage] = useState(false)
@@ -22,23 +23,25 @@ function Score(props) {
 
     return (
         <div>
-            <header>username={props.username}</header>
+            <header>Current User: {props.username}</header>
             <div className='score-container'>
                 <div className='score-card'>
                     <h1>You've reached the end of the game!</h1>
                     <h2>Your score: {props.score}.</h2>
                     <h3>{(props.score / props.allQuestionCount * 100).toFixed(2)}%</h3>
                 </div>
-                <button
-                    className='score-restart-button'
-                    onClick={() => setRestart(true)}
-                >Restart Trivia Game
-                </button>
-                <button
-                    className='score-exit-button'
-                    onClick={() => setHomePage(true)}
-                >Exit Game
-                </button>
+                <div className='score-buttons'>
+                    <button
+                        className='restart'
+                        onClick={() => setRestart(true)}
+                    >Restart</button>
+
+                    <button
+                        className='exit'
+                        onClick={() => setHomePage(true)}
+                    >Exit</button>
+
+                </div>
             </div>
         </div>
     )
