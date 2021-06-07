@@ -19,7 +19,7 @@ header {
     transform: translate(-50%, -50%);
     width: 500px;
     border-radius: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -34,6 +34,7 @@ header {
 .score-card h1 {
     font-size: 28px;
     text-align: center;
+    padding-left: 40px;
 }
 
 h3 {
@@ -78,3 +79,7 @@ h3 {
     right: 100px;
 }
 
+.score img {
+    align-content: center;
+    width: 50%;
+}
