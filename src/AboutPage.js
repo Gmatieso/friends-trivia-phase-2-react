@@ -50,7 +50,7 @@ class AboutPage extends Component {
                     Hello~ My name is Christine Jeon. I absolutely love Friends and can
                     probably recite every single line from every episode of every season
                     of this series. I was very excited about the Friends Reunion on HBO Max
-                    and thought I'd create a trivia game for my fellow Friends lovers. See if
+                    and wanted to create a trivia game for my fellow Friends lovers. See if
                     you're also a Friends fanatic and can answer all of the trivia questions!
                     You'll be able to see your score at the end!{"\n"}
                     Good luck!
