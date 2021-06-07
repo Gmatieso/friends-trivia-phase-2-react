@@ -186,7 +186,8 @@ class QuizQuestions extends Component {
                             >End Quiz</button>
 
                         </div>
-                    </div >
+                    </div>
+                    <img src='/images/Friendsquiz.jpeg' alt='Friends trivia episode'></img>
                 </div>
             )
         }
