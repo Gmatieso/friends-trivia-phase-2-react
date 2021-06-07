@@ -1,0 +1,80 @@
+header {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(123, 70, 153, 0.87);
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color:rgba(255, 250, 207, 0.897);
+}
+
+.score-container {
+    position: relative;
+    top: 100px;
+    left: 50%;
+    right: 50%;
+    bottom: 180px;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border-radius: 40px;
+    padding-bottom: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.score-card {
+    text-align: center;
+    margin: 5px 2px;
+    font-size: 17px;
+    font-weight: 640;
+}
+
+.score-card h1 {
+    font-size: 28px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.score-buttons button {
+    margin: 2px 5px;
+    height: 40px;
+    width: 140px;
+    border: 1px solid rgb(123, 70, 153);
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: fixed;
+}
+
+.score-buttons button.restart {
+    background: rgba(255, 250, 207, 0.897);
+    color: rgb(123, 70, 153);
+    left: 100px;
+}
+
+.score-buttons button.restart:hover {
+    color: rgba(255, 250, 207, 0.897);
+    background: rgb(123, 70, 153);
+    left: 100px;
+}
+
+.score-buttons button.exit {
+    background: rgba(255, 250, 207, 0.897);
+    color: rgb(123, 70, 153);
+    right: 100px;
+}
+
+.score-buttons button.exit:hover {
+    color: rgba(255, 250, 207, 0.897);
+    background: rgb(123, 70, 153);
+    right: 100px;
+}
+
