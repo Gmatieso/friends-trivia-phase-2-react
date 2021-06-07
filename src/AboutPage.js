@@ -43,7 +43,8 @@ class AboutPage extends Component {
                     b<span className='blue-span'>&#183;</span>o
                     <span className='yellow-span'>&#183;</span>u
                     <span className='red-span'>&#183;</span>t&nbsp;
-                    M<span className='blue-span'>&#183;</span>e</h2>
+                    M<span className='blue-span'>&#183;</span>e
+                </h2>
                 <div
                     className='about-me'>
                     Hello~ My name is Christine Jeon. I absolutely love Friends and can
