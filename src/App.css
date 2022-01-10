@@ -4,6 +4,7 @@
   padding-left: 10px;
   border-bottom: 1px dotted rgba(108, 65, 156, 0.664);
   font-family: 'Permanent Marker', sans-serif;
+  color:rgb(108, 65, 156);
 }
 
 li {
@@ -18,8 +19,4 @@ li {
 
 .app-navbar-link:hover {
   color:rgb(164, 134, 192);
-}
-
-.app-navbar-link {
-  color:rgb(108, 65, 156);
 }
