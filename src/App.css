@@ -19,3 +19,7 @@ li {
 .app-navbar-link:hover {
   color:rgb(164, 134, 192);
 }
+
+.app-navbar-link {
+  color:rgb(108, 65, 156);
+}
