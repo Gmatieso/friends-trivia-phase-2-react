@@ -22,4 +22,4 @@ Via react-routing, you can click on `Home`, `About`, and `Trivia`
 <a href="https://csjeon28.github.io/Data/db.json" target="_blank">Friends Trivia questions API</a>
 
 ### Heroku Deployment:
-<!-- <a href="" target="_blank">Friends Trivia</a> -->
+<a href="https://cj-friends-trivia-react.herokuapp.com/" target="_blank">Friends Trivia</a>
