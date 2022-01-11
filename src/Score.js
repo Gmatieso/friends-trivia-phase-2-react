@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Trivia from './Trivia';
 import QuizQuestions from './QuizQuestions';
 import './Score.css';
-// import axios from 'axios';
 
-const api_url = 'https://csjeon28.github.io/Data/db.json';
-
-function Score(props) {
+const Score = (props) => {
     const [homePage, setHomePage] = useState(false)
     const [restart, setRestart] = useState(false)
-
-    // useEffect(() => {
-    //     const score = { score: { score }, username: { username } };
-    //     axios.post(api_url, score)
-    //         .then(results =>
-    //             setHomePage(results.data))
-    // })
 
     if (homePage === true) {
         return (
@@ -57,7 +47,6 @@ function Score(props) {
             <img src='/images/RachelPhoebe.gif' alt='Rachel and Phoebe excited'></img>
         </div>
     )
-
 }
 
 export default Score;
