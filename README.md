@@ -23,3 +23,7 @@ Via react-routing, you can click on `Home`, `About`, and `Trivia`
 
 ### Heroku Deployment:
 <a href="https://cj-friends-trivia-react.herokuapp.com/" target="_blank">Friends Trivia</a>
+
+### Project Screen Recording:
+<a href="https://www.dropbox.com/s/734jkkwgnta24or/React-Phase-2-Project-Video.mov?dl=0" target="_blank">Project Demo</a>
+
